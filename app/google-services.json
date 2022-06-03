@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "71078979010",
+    "project_id": "pos-gt-mobile",
+    "storage_bucket": "pos-gt-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71078979010:android:bd85f4d53ef359e6b1e25b",
+        "android_client_info": {
+          "package_name": "com.polar502.posgt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "71078979010-5ic0p5o4qpolgl866pvl0rqkef8binro.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADynwxlhqSjEqRpj_qXB8OwRsBIgNbCOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "71078979010-5ic0p5o4qpolgl866pvl0rqkef8binro.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

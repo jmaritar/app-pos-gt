@@ -4,11 +4,26 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/MARIO ARITA/Desktop/PosGT/app/src/main/res/layout/content_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/drawable/ic_back.xml" value="0.1575" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/drawable/ic_bg.xml" value="0.1575" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/drawable/ic_buttom.xml" value="0.1575" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/drawable/ic_email.xml" value="0.1575" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/drawable/ic_field.xml" value="0.1575" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1005" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/drawable/ic_lock.xml" value="0.1575" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/drawable/ic_logo.xml" value="0.1575" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/drawable/ic_profile.xml" value="0.1575" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/drawable/ic_sign_out.xml" value="0.1575" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/drawable/ic_user.xml" value="0.1" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/drawable/side_nav_bar.xml" value="0.1005" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/activity_account_recovery.xml" value="0.7205882352941176" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/activity_check_email.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/activity_sign_in.xml" value="0.1" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/activity_sign_up.xml" value="0.16530797101449277" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/app_bar_main.xml" value="0.2" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/nav_header_main.xml" value="0.2" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/menu/activity_main_drawer.xml" value="0.2" />
       </map>
     </option>
   </component>
