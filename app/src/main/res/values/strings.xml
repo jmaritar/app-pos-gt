@@ -2,26 +2,32 @@
     <string name="app_name">Pos GT</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Mario Arita</string>
+    <string name="nav_header_subtitle">marioarita502@gmail.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+
+<!--    Apartado de descripción del menu-->
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_inventory">Inventario</string>
+    <string name="menu_client">Clientes</string>
+    <string name="menu_orders">Pedidos</string>
 
     <string name="title_active_login">Pos GT Login</string>
     <string name="password">Contraseña</string>
     <string name="new_password">Nueva contraseña</string>
     <string name="current_password">Contraseña actual</string>
-    <string name="name">Nombre completo</string>
+    <string name="name">User Name</string>
     <string name="email">Email</string>
     <string name="login">Login</string>
     <string name="repeat_password">Confirma la contraseña</string>
     <string name="signup">Sign Up</string>
     <string name="text_signup">No tienes cuenta?</string>
-    <string name="link_signup">Sing up</string>
+    <string name="link_signup">Sign Up</string>
     <string name="all">TODO</string>
     <string name="user_email">userdefault@gmail.com</string>
     <string name="user_name">User Default</string>
@@ -41,5 +47,18 @@
     <string name="subtitle_delete_account">Por motivos de seguridad para eliminar tu cuenta por completo, debes de ingresar tu contraseña.</string>
     <string name="delete">Eliminar</string>
 
+<!--    mas textos-->
 
+    <string name="title_main">Lista de productos</string>
+    <string name="sub_title_main">Productos en Inventario</string>
+    <string name="date">01/06/2022</string>
+    <string name="price">Q 40</string>
+    <string name="description">Esta es la descripción del producto</string>
+    <string name="id_form">Id</string>
+    <string name="name_form">Nombre</string>
+    <string name="date_form">Fecha</string>
+    <string name="price_form">Precio</string>
+    <string name="quantity_form">Cantidad</string>
+    <string name="action_form">Guardar</string>
+    <string name="description_form">Descripción</string>
 </resources>
