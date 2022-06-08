@@ -30,9 +30,10 @@
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/drawable/ic_user.xml" value="0.1" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/drawable/side_nav_bar.xml" value="0.1005" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/activity_account_recovery.xml" value="0.2" />
-        <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/activity_add.xml" value="0.4948453608247423" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/activity_add.xml" value="0.5" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/activity_check_email.xml" value="0.2" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/activity_detail.xml" value="0.1" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/activity_edit.xml" value="0.2" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/activity_sign_in.xml" value="0.33" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
@@ -45,6 +46,7 @@
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/fragment_orders.xml" value="0.1388888888888889" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/fragment_slideshow.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/nav_header_main.xml" value="0.25" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/layout/video_game_content.xml" value="0.33" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/menu/activity_main_drawer.xml" value="0.2" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-mobile/app/src/main/res/menu/main.xml" value="0.2" />
       </map>
