@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
+import com.polar502.posgt.VideoGame
 import com.polar502.posgt.databinding.FragmentInventoryBinding
 
 class InventoryFragment : Fragment() {
@@ -16,6 +19,8 @@ class InventoryFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
