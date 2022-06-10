@@ -1,4 +1,4 @@
-package com.polar502.posgt
+package com.polar502.posgt.database
 
 import com.google.firebase.database.Exclude
 import com.google.firebase.database.IgnoreExtraProperties

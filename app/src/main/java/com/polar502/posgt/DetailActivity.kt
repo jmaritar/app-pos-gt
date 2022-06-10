@@ -12,6 +12,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import com.polar502.posgt.database.VideoGame
 
 class DetailActivity : AppCompatActivity() {
 
@@ -33,7 +34,7 @@ class DetailActivity : AppCompatActivity() {
             @SuppressLint("SetTextI18n")
             override fun onDataChange(dataSnapshot: DataSnapshot) {
 
-                val mVideoGame:VideoGame? = dataSnapshot.getValue(VideoGame::class.java)
+                val mVideoGame: VideoGame? = dataSnapshot.getValue(VideoGame::class.java)
                 if (mVideoGame != null) {
                     bindingActivityDetail.nameTextView.text = mVideoGame.name.toString()
                     bindingActivityDetail.dateTextView.text = mVideoGame.date.toString()

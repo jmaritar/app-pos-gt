@@ -1,4 +1,4 @@
-package com.polar502.posgt
+package com.polar502.posgt.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

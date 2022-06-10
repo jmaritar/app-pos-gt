@@ -10,6 +10,7 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import com.polar502.posgt.database.VideoGame
 
 class AddActivity : AppCompatActivity() {
     //Variable para instanciar los componentes de la interfaz add

@@ -1,4 +1,4 @@
-package com.polar502.posgt
+package com.polar502.posgt.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +9,7 @@ import com.polar502.posgt.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.polar502.posgt.MainActivity
 import java.util.regex.Pattern
 
 class SignUpActivity : AppCompatActivity() {
