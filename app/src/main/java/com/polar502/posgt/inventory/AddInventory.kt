@@ -1,22 +1,22 @@
-package com.polar502.posgt
-
+package com.polar502.posgt.inventory
 
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.polar502.posgt.databinding.ActivityAddBinding
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import com.polar502.posgt.inventory.VideoGame
+import com.polar502.posgt.databinding.ActivityAddInventoryBinding
+import com.polar502.posgt.databinding.ActivityDetailInventoryBinding
 
-class AddActivity : AppCompatActivity() {
+class AddInventory : AppCompatActivity() {
+
     //Variable para instanciar los componentes de la interfaz add
-    private lateinit var bindingActivityAdd: ActivityAddBinding
+    private lateinit var bindingActivityAdd: ActivityAddInventoryBinding
     private val database = Firebase.database
-    private val myRef = database.getReference("game")
+    private val myRef = database.getReference("inventory")
     private val file = 1
 
     //Imagenes de URL
@@ -24,28 +24,30 @@ class AddActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bindingActivityAdd = ActivityAddBinding.inflate(layoutInflater)
+        bindingActivityAdd = ActivityAddInventoryBinding.inflate(layoutInflater)
         val view = bindingActivityAdd.root
         setContentView(view)
 
         bindingActivityAdd.saveButton.setOnClickListener {
 
+            val id : String = bindingActivityAdd.idEditText.text.toString()
             val name : String = bindingActivityAdd.nameEditText.text.toString()
+            val amount : String = bindingActivityAdd.amountEditText.text.toString()
             val date : String = bindingActivityAdd.dateEditText.text.toString()
             val price : String = bindingActivityAdd.priceEditText.text.toString()
             val description: String = bindingActivityAdd.descriptionEditText.text.toString()
             val key: String = myRef.push().key.toString()
             val folder: StorageReference = FirebaseStorage.getInstance().reference.child("game")
-            val videoGameReference : StorageReference = folder.child("img$key")
+            val inventoryReference : StorageReference = folder.child("img$key")
 
             if(fileUri==null){
-                val mVideoGame = VideoGame(name, date, price, description)
-                myRef.child(key).setValue(mVideoGame)
+                val mInventory = Inventory(id, name, amount, date, price, description)
+                myRef.child(key).setValue(mInventory)
             } else {
-                videoGameReference.putFile(fileUri!!).addOnSuccessListener {
-                    videoGameReference.downloadUrl.addOnSuccessListener { uri ->
-                        val mVideoGame = VideoGame(name, date, price, description, uri.toString())
-                        myRef.child(key).setValue(mVideoGame)
+                inventoryReference.putFile(fileUri!!).addOnSuccessListener {
+                    inventoryReference.downloadUrl.addOnSuccessListener { uri ->
+                        val mInventory = Inventory(id, name, amount, date, price, description, uri.toString())
+                        myRef.child(key).setValue(mInventory)
                     }
                 }
             }
@@ -73,5 +75,4 @@ class AddActivity : AppCompatActivity() {
             }
         }
     }
-
 }

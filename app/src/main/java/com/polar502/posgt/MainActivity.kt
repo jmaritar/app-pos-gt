@@ -6,10 +6,10 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import com.polar502.posgt.databinding.ActivityMainBinding
-import com.polar502.posgt.fragment.CustomersFragment
-import com.polar502.posgt.fragment.HomeFragment
-import com.polar502.posgt.fragment.InventoryFragment
-import com.polar502.posgt.fragment.OrdersFragment
+import com.polar502.posgt.customers.CustomersFragment
+import com.polar502.posgt.home.HomeFragment
+import com.polar502.posgt.inventory.InventoryFragment
+import com.polar502.posgt.orders.OrdersFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -37,10 +37,10 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                     R.id.nav_inventory -> {
-                        supportFragmentManager.beginTransaction().apply {
+/*                        supportFragmentManager.beginTransaction().apply {
                             replace(R.id.fragmentcontainerview, InventoryFragment())
                             commit()
-                        }
+                        }*/
                     }
                     R.id.nav_orders -> {
                         supportFragmentManager.beginTransaction().apply {

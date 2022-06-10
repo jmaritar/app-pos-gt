@@ -12,7 +12,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
-import com.polar502.posgt.database.VideoGame
+import com.polar502.posgt.inventory.VideoGame
 
 class DetailActivity : AppCompatActivity() {
 

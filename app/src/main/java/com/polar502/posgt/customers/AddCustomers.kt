@@ -1,18 +1,20 @@
-package com.polar502.posgt
-
+package com.polar502.posgt.customers
 
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.polar502.posgt.databinding.ActivityAddBinding
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import com.polar502.posgt.R
+import com.polar502.posgt.databinding.ActivityAddBinding
 import com.polar502.posgt.inventory.VideoGame
 
-class AddActivity : AppCompatActivity() {
+class AddCustomers : AppCompatActivity() {
+
+
     //Variable para instanciar los componentes de la interfaz add
     private lateinit var bindingActivityAdd: ActivityAddBinding
     private val database = Firebase.database
@@ -73,5 +75,4 @@ class AddActivity : AppCompatActivity() {
             }
         }
     }
-
 }

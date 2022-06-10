@@ -1,4 +1,4 @@
-package com.polar502.posgt.fragment
+package com.polar502.posgt.customers
 
 import androidx.fragment.app.Fragment
 import com.polar502.posgt.R

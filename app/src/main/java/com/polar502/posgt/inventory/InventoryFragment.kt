@@ -1,4 +1,4 @@
-package com.polar502.posgt.fragment
+package com.polar502.posgt.inventory
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -22,18 +21,17 @@ import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.polar502.posgt.*
-import com.polar502.posgt.database.VideoGame
 import com.polar502.posgt.databinding.FragmentInventoryBinding
 
-class InventoryFragment : Fragment(R.layout.fragment_inventory) {
+class InventoryFragment : AppCompatActivity(R.layout.fragment_inventory) {
 
     //Declaración de Variables
     private lateinit var bindingFragmentInventory: FragmentInventoryBinding
     private lateinit var messagesListener: ValueEventListener
 
     private val database = Firebase.database
-    private val listVideoGames:MutableList<VideoGame> = ArrayList()
-    private val myRef = database.getReference("game")
+    private val listInventory:MutableList<Inventory> = ArrayList()
+    private val myRef = database.getReference("inventory")
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,7 +39,7 @@ class InventoryFragment : Fragment(R.layout.fragment_inventory) {
 
         bindingFragmentInventory = FragmentInventoryBinding.inflate(layoutInflater)
 
-/*        //Colocar el contenedor de los objetos -> recyclerView
+        //Colocar el contenedor de los objetos -> recyclerView
 
       val view = bindingFragmentInventory.root
         setContentView(view)
@@ -51,12 +49,12 @@ class InventoryFragment : Fragment(R.layout.fragment_inventory) {
 //        Evento del boton (+) del AddActivity
 
         bindingFragmentInventory.addImageView.setOnClickListener { v ->
-            val intent = Intent(this, AddActivity::class.java)
+            val intent = Intent(this, AddInventory::class.java)
             v.context.startActivity(intent)
-        }*/
+        }
 
         //Elimina el contenedor de los objetos -> recyclerView
-        listVideoGames.clear()
+        listInventory.clear()
         setupRecyclerView(bindingFragmentInventory.recyclerView)
 
     }
@@ -66,18 +64,21 @@ class InventoryFragment : Fragment(R.layout.fragment_inventory) {
         messagesListener = object : ValueEventListener {
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                listVideoGames.clear()
+                listInventory.clear()
                 dataSnapshot.children.forEach { resp ->
-                    val mVideoGame =
-                        VideoGame(  resp.child("name").getValue<String>(),
+                    val mInventory =
+                        Inventory(
+                            resp.child("id").getValue<String>(),
+                            resp.child("name").getValue<String>(),
+                            resp.child("amount").getValue<String>(),
                             resp.child("date").getValue<String>(),
                             resp.child("price").getValue<String>(),
                             resp.child("description").getValue<String>(),
                             resp.child("url").getValue<String>(),
                             resp.key)
-                    mVideoGame.let { listVideoGames.add(it) }
+                    mInventory.let { listInventory.add(it) }
                 }
-                recyclerView.adapter = VideogameViewAdapter(listVideoGames)
+                recyclerView.adapter = InventoryViewAdapter(listInventory)
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -89,38 +90,40 @@ class InventoryFragment : Fragment(R.layout.fragment_inventory) {
         deleteSwipe(recyclerView)
     }
 
-    class VideogameViewAdapter(private val values: List<VideoGame>) :
-        RecyclerView.Adapter<VideogameViewAdapter.ViewHolder>() {
+    class InventoryViewAdapter(private val values: MutableList<Inventory>) :
+        RecyclerView.Adapter<InventoryViewAdapter.ViewHolder>() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
             val view = LayoutInflater.from(parent.context)
-                .inflate(R.layout.video_game_content, parent, false)
+                .inflate(R.layout.inventory_content, parent, false)
             return ViewHolder(view)
         }
 
         @SuppressLint("SetTextI18n")
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-            val mVideoGame = values[position]
-            holder.mNameTextView.text = mVideoGame.name
-            holder.mDateTextView.text = mVideoGame.date
-            holder.mPriceTextView.text = "Q" + mVideoGame.price
+            val mInventory = values[position]
+            holder.mIdTextView.text = mInventory.name
+            holder.mNameTextView.text = mInventory.name
+            holder.mAmountTextView.text = "C" + mInventory.name
+            holder.mDateTextView.text = mInventory.date
+            holder.mPriceTextView.text = "Q" + mInventory.price
             holder.mPosterImgeView.let {
                 Glide.with(holder.itemView.context)
-                    .load(mVideoGame.url)
+                    .load(mInventory.url)
                     .into(it)
             }
 
             holder.itemView.setOnClickListener { v ->
                 val intent = Intent(v.context, DetailActivity::class.java).apply {
-                    putExtra("key", mVideoGame.key)
+                    putExtra("key", mInventory.key)
                 }
                 v.context.startActivity(intent)
             }
 
             holder.itemView.setOnLongClickListener{ v ->
                 val intent = Intent(v.context, EditActivity::class.java).apply {
-                    putExtra("key", mVideoGame.key)
+                    putExtra("key", mInventory.key)
                 }
                 v.context.startActivity(intent)
                 true
@@ -130,7 +133,9 @@ class InventoryFragment : Fragment(R.layout.fragment_inventory) {
         override fun getItemCount() = values.size
 
         inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+            val mIdTextView: TextView = view.findViewById(R.id.idTextView) as TextView
             val mNameTextView: TextView = view.findViewById(R.id.nameTextView) as TextView
+            val mAmountTextView: TextView = view.findViewById(R.id.amountTextView) as TextView
             val mDateTextView: TextView = view.findViewById(R.id.dateTextView) as TextView
             val mPriceTextView: TextView = view.findViewById(R.id.priceTextView) as TextView
             val mPosterImgeView: ImageView = view.findViewById(R.id.posterImgeView) as ImageView
@@ -144,11 +149,11 @@ class InventoryFragment : Fragment(R.layout.fragment_inventory) {
             }
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                val imageFirebaseStorage = FirebaseStorage.getInstance().reference.child("game/img"+listVideoGames[viewHolder.adapterPosition].key)
+                val imageFirebaseStorage = FirebaseStorage.getInstance().reference.child("inventory/img"+listInventory[viewHolder.adapterPosition].key)
                 imageFirebaseStorage.delete()
 
-                listVideoGames[viewHolder.adapterPosition].key?.let { myRef.child(it).setValue(null) }
-                listVideoGames.removeAt(viewHolder.adapterPosition)
+                listInventory[viewHolder.adapterPosition].key?.let { myRef.child(it).setValue(null) }
+                listInventory.removeAt(viewHolder.adapterPosition)
 
                 recyclerView.adapter?.notifyItemRemoved(viewHolder.adapterPosition)
                 recyclerView.adapter?.notifyDataSetChanged()

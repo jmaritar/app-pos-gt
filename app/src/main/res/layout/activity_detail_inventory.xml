@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/plum_700"
-    tools:context=".DetailActivity">
+    tools:context=".inventory.DetailInventoryActivity">
 
     <ImageView
         android:id="@+id/posterImgeView"
@@ -52,11 +52,13 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
+
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
+
                 android:layout_toStartOf="@+id/priceTextView"
                 android:layout_toLeftOf="@+id/priceTextView"
                 android:text="@string/name"
@@ -85,10 +87,58 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/dateTextView"
+                android:id="@+id/idTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/nameTextView"
+
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+
+                android:layout_toEndOf="@+id/amountTextView"
+                android:layout_toRightOf="@+id/amountTextView"
+
+                android:text="@string/id_form"
+                android:textColor="@color/teal_500"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/amountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/priceTextView"
+
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+
+                android:background="@drawable/ic_round_description"
+                android:paddingStart="20dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="4dp"
+
+
+                android:text="@string/amount"
+                android:textColor="@color/orange_200"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/amountTextView"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentEnd="true"
@@ -98,7 +148,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="32dp"
                 android:layout_marginRight="32dp"
-                android:gravity="end"
+                android:gravity="start"
                 android:text="@string/date"
                 android:textColor="@color/black_200" />
 
@@ -119,6 +169,9 @@
                 android:layout_marginBottom="32dp"
                 android:text="@string/description"
                 android:textColor="@color/white" />
+
         </RelativeLayout>
+
     </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
