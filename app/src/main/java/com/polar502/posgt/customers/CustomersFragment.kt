@@ -115,13 +115,13 @@ class CustomersFragment : Fragment() {
                     .into(it)
             }
 
-            //Al clickear encima del item ir a → detalles
+/*            //Al clickear encima del item ir a → detalles
             holder.itemView.setOnClickListener { v ->
                 val intent = Intent(v.context, DetailCustomers::class.java).apply {
                     putExtra("key", mCustomers.key)
                 }
                 v.context.startActivity(intent)
-            }
+            }*/
 
             //Al mantener presionado encima del item ir a → edit
             holder.itemView.setOnLongClickListener{ v ->

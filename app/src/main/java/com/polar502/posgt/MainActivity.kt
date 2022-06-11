@@ -28,6 +28,27 @@ class MainActivity : AppCompatActivity() {
 
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+            //Recupero los posibles parametros de entrada
+            val bundle = intent.extras
+            val estado = bundle?.getString("estado")
+
+            //Decido cual de los dos Fregments iniciar segun los parametros iniciales de MainActivity
+            if(estado == "inventario"){
+
+                //Se inicia por defecto la vista en el fragmento de Inventory
+                supportFragmentManager.beginTransaction().apply {
+                    replace(R.id.fragmentcontainerview, InventoryFragment())
+                    commit()}
+
+            } else{
+
+                //Se inicia por defecto la vista en el fragmento de Home
+                supportFragmentManager.beginTransaction().apply {
+                    replace(R.id.fragmentcontainerview, HomeFragment())
+                    commit()}
+
+            }
+
             navView.setNavigationItemSelectedListener {
                 when (it.itemId) {
                     R.id.nav_home -> {

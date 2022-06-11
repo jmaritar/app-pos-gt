@@ -8,17 +8,30 @@
     android:layout_height="match_parent"
     tools:context=".home.HomeFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Home"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="42sp"
+    <ImageView
+        android:id="@+id/go_inventory"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/ic_home_field"
+        android:padding="90dp"
+        android:src="@drawable/inventario"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageView
+        android:id="@+id/add_item"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/ic_home_field"
+        android:padding="90dp"
+        android:src="@drawable/nuevo"
+        app:layout_constraintBottom_toTopOf="@+id/go_inventory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
