@@ -33,7 +33,7 @@ class HomeFragment : Fragment() {
             v.context.startActivity(intent)
         }
 
-        //Evento del boton ir a inventario del InventoryFragment
+        //Evento del boton ir a inventario del InventoryFragment.
         btn_go_inventory.setOnClickListener { v ->
             val intent = Intent(activity, MainActivity::class.java)
 
