@@ -31,7 +31,7 @@
             android:id="@+id/subtTitleTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lista de Productos"
+            android:text="Lista de Proveedores"
             android:textSize="24sp"
             android:textColor="@color/white" />
     </LinearLayout>
@@ -84,7 +84,7 @@
             android:layout_marginBottom="80dp"
             app:layoutManager="LinearLayoutManager"
             tools:context=".MainActivity"
-            tools:listitem="@layout/inventory_content">
+            tools:listitem="@layout/providers_content">
 
         </androidx.recyclerview.widget.RecyclerView>
     </androidx.cardview.widget.CardView>

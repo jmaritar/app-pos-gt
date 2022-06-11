@@ -8,17 +8,15 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import com.polar502.posgt.R
-import com.polar502.posgt.databinding.ActivityAddBinding
-import com.polar502.posgt.inventory.VideoGame
+import com.polar502.posgt.databinding.ActivityAddCustomersBinding
+
 
 class AddCustomers : AppCompatActivity() {
 
-
     //Variable para instanciar los componentes de la interfaz add
-    private lateinit var bindingActivityAdd: ActivityAddBinding
+    private lateinit var bindingActivityAdd: ActivityAddCustomersBinding
     private val database = Firebase.database
-    private val myRef = database.getReference("game")
+    private val myRef = database.getReference("customers")
     private val file = 1
 
     //Imagenes de URL
@@ -26,28 +24,33 @@ class AddCustomers : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bindingActivityAdd = ActivityAddBinding.inflate(layoutInflater)
+        bindingActivityAdd = ActivityAddCustomersBinding.inflate(layoutInflater)
         val view = bindingActivityAdd.root
         setContentView(view)
 
+        //Al clickear encima del botton Guardar hacer → saveButton
         bindingActivityAdd.saveButton.setOnClickListener {
 
+            val id : String = bindingActivityAdd.idEditText.text.toString()
             val name : String = bindingActivityAdd.nameEditText.text.toString()
-            val date : String = bindingActivityAdd.dateEditText.text.toString()
-            val price : String = bindingActivityAdd.priceEditText.text.toString()
-            val description: String = bindingActivityAdd.descriptionEditText.text.toString()
+            val nit : String = bindingActivityAdd.nitEditText.text.toString()
+            val phone : String = bindingActivityAdd.phoneEditText.text.toString()
+            val email : String = bindingActivityAdd.emailEditText.text.toString()
+            val address : String = bindingActivityAdd.addressEditText.text.toString()
             val key: String = myRef.push().key.toString()
-            val folder: StorageReference = FirebaseStorage.getInstance().reference.child("game")
-            val videoGameReference : StorageReference = folder.child("img$key")
+
+            //folder del Storege en Firebase
+            val folder: StorageReference = FirebaseStorage.getInstance().reference.child("customers")
+            val customersReference : StorageReference = folder.child("img$key")
 
             if(fileUri==null){
-                val mVideoGame = VideoGame(name, date, price, description)
-                myRef.child(key).setValue(mVideoGame)
+                val mCustomers = Customers(id, name, nit, phone, email, address)
+                myRef.child(key).setValue(mCustomers)
             } else {
-                videoGameReference.putFile(fileUri!!).addOnSuccessListener {
-                    videoGameReference.downloadUrl.addOnSuccessListener { uri ->
-                        val mVideoGame = VideoGame(name, date, price, description, uri.toString())
-                        myRef.child(key).setValue(mVideoGame)
+                customersReference.putFile(fileUri!!).addOnSuccessListener {
+                    customersReference.downloadUrl.addOnSuccessListener { uri ->
+                        val mCustomers = Customers(id, name, nit, phone, email, address, uri.toString())
+                        myRef.child(key).setValue(mCustomers)
                     }
                 }
             }
@@ -59,7 +62,7 @@ class AddCustomers : AppCompatActivity() {
             fileUpload()
         }
     }
-    //Función Upload
+    //Función Upload cargar imagen
     private fun fileUpload() {
         val intent = Intent(Intent.ACTION_GET_CONTENT)
         intent.type = "*/*"
@@ -75,4 +78,5 @@ class AddCustomers : AppCompatActivity() {
             }
         }
     }
+
 }

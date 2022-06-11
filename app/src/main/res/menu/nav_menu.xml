@@ -9,9 +9,9 @@
         android:title="@string/menu_inventory"
         android:icon="@drawable/ic_inventory"/>
 
-    <item android:id="@+id/nav_orders"
-        android:title="@string/menu_orders"
-        android:icon="@drawable/ic_orders"/>
+    <item android:id="@+id/nav_providers"
+        android:title="@string/menu_providers"
+        android:icon="@drawable/ic_providers"/>
 
     <item android:id="@+id/nav_customers"
         android:title="@string/menu_client"

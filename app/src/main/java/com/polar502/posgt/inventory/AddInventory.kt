@@ -28,6 +28,7 @@ class AddInventory : AppCompatActivity() {
         val view = bindingActivityAdd.root
         setContentView(view)
 
+        //Al clickear encima del botton Guardar hacer → saveButton
         bindingActivityAdd.saveButton.setOnClickListener {
 
             val id : String = bindingActivityAdd.idEditText.text.toString()
@@ -37,7 +38,9 @@ class AddInventory : AppCompatActivity() {
             val price : String = bindingActivityAdd.priceEditText.text.toString()
             val description: String = bindingActivityAdd.descriptionEditText.text.toString()
             val key: String = myRef.push().key.toString()
-            val folder: StorageReference = FirebaseStorage.getInstance().reference.child("game")
+
+            //folder del Storege en Firebase
+            val folder: StorageReference = FirebaseStorage.getInstance().reference.child("inventory")
             val inventoryReference : StorageReference = folder.child("img$key")
 
             if(fileUri==null){
@@ -59,7 +62,7 @@ class AddInventory : AppCompatActivity() {
             fileUpload()
         }
     }
-    //Función Upload
+    //Función Upload cargar imagen
     private fun fileUpload() {
         val intent = Intent(Intent.ACTION_GET_CONTENT)
         intent.type = "*/*"

@@ -9,7 +9,7 @@ import com.polar502.posgt.databinding.ActivityMainBinding
 import com.polar502.posgt.customers.CustomersFragment
 import com.polar502.posgt.home.HomeFragment
 import com.polar502.posgt.inventory.InventoryFragment
-import com.polar502.posgt.orders.OrdersFragment
+import com.polar502.posgt.providers.ProvidersFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -37,14 +37,14 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                     R.id.nav_inventory -> {
-/*                        supportFragmentManager.beginTransaction().apply {
+                        supportFragmentManager.beginTransaction().apply {
                             replace(R.id.fragmentcontainerview, InventoryFragment())
                             commit()
-                        }*/
+                        }
                     }
-                    R.id.nav_orders -> {
+                    R.id.nav_providers -> {
                         supportFragmentManager.beginTransaction().apply {
-                            replace(R.id.fragmentcontainerview, OrdersFragment())
+                            replace(R.id.fragmentcontainerview, ProvidersFragment())
                             commit()
                         }
                     }

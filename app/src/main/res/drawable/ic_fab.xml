@@ -3,8 +3,8 @@
         <shape android:shape="oval">
             <gradient
                 android:angle="270"
-                android:startColor="#ffff694a"
-                android:endColor="#ff8e4b" />
+                android:startColor="#292B39"
+                android:endColor="#292B39" />
             <size
                 android:width="48dp"
                 android:height="48dp" />
@@ -15,8 +15,8 @@
             <solid android:color="#ffff"/>
             <corners android:radius="20dp" />
             <size
-                android:width="32dp"
-                android:height="3dp" />
+                android:width="25dp"
+                android:height="5dp" />
         </shape>
     </item>
     <item android:gravity="center">
@@ -26,8 +26,8 @@
                 <solid android:color="#ffff"/>
                 <corners android:radius="20dp" />
                 <size
-                    android:width="32dp"
-                    android:height="3dp" />
+                    android:width="25dp"
+                    android:height="5dp" />
             </shape>
         </rotate>
     </item>

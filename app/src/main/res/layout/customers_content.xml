@@ -16,65 +16,33 @@
         android:layout_marginRight="16dp"
         android:layout_marginTop="32dp"
         app:cardCornerRadius="8dp"
-        app:cardElevation="0dp"
-        app:cardBackgroundColor="@color/cardview_dark_background"
+        app:cardElevation="0.5dp"
+        app:cardBackgroundColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/posterCardView">
-
-        <TextView
-            android:id="@+id/idTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="118dp"
-            android:layout_marginTop="8dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/id"
-            android:textColor="@color/purple_700"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/cardView"
-            app:layout_constraintStart_toEndOf="@+id/posterCardView" />
-
-        <TextView
-            android:id="@+id/amountTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginBottom="8dp"
-
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="118dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="85dp"
-
-            android:text="@string/amount"
-            android:textColor="@color/purple_200"
-            app:layout_constraintEnd_toEndOf="@+id/cardView"
-            app:layout_constraintStart_toEndOf="@+id/posterCardView"
-            app:layout_constraintTop_toBottomOf="@+id/nameTextView"
-            />
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/priceTextView"
+        android:id="@+id/phoneTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginRight="16dp"
         android:layout_marginEnd="16dp"
-        android:text="@string/price"
-        android:textColor="@color/teal_500"
-        android:textSize="20sp"
+        android:text="@string/phone"
+        android:textColor="@color/purple_200"
+        android:textSize="18sp"
         android:fontFamily="sans-serif-medium"
+        android:elevation="5dp"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
         app:layout_constraintTop_toTopOf="@+id/cardView" />
 
     <TextView
         android:id="@+id/nameTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="245dp"
+        android:layout_height="30dp"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
@@ -82,30 +50,31 @@
         android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-light"
         android:text="@string/name"
-        android:textSize="20sp"
-        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textColor="@color/black_500"
+        android:elevation="5dp"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
         app:layout_constraintStart_toEndOf="@+id/posterCardView"
-        app:layout_constraintTop_toBottomOf="@+id/priceTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/phoneTextView" />
 
     <TextView
-        android:id="@+id/dateTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="16dp"
-        android:layout_marginEnd="16dp"
+        android:id="@+id/emailTextView"
+        android:layout_width="245dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/date"
-        android:textColor="@color/black_200"
+        android:elevation="5dp"
+        android:text="@string/email_exam"
+        android:textColor="@color/teal_200"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/cardView"
-        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toEndOf="@+id/posterCardView"
         app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/posterCardView"
         android:layout_width="86dp"
         android:layout_height="140dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:layout_marginBottom="16dp"
@@ -125,7 +94,9 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_gradient_white"/>
+            android:background="@drawable/ic_gradient_white" />
     </androidx.cardview.widget.CardView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

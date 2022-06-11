@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -23,31 +23,53 @@ import com.google.firebase.storage.FirebaseStorage
 import com.polar502.posgt.*
 import com.polar502.posgt.databinding.FragmentInventoryBinding
 
-class InventoryFragment : AppCompatActivity(R.layout.fragment_inventory) {
+class InventoryFragment : Fragment() {
 
     //Declaración de Variables
-    private lateinit var bindingFragmentInventory: FragmentInventoryBinding
+  /*  private lateinit var bindingFragmentInventory: FragmentInventoryBinding //Esta linea de codigo queda en desuso*/
     private lateinit var messagesListener: ValueEventListener
 
     private val database = Firebase.database
     private val listInventory:MutableList<Inventory> = ArrayList()
     private val myRef = database.getReference("inventory")
 
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        super.onCreate(savedInstanceState)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+        //Obtengo la vista y la guardo en una variable
+        val vista = inflater.inflate(R.layout.fragment_inventory, container, false)
+
+        //Creo una variable para almacenar el boton agregar.
+        val btn_img: ImageView = vista.findViewById(R.id.addImageView) as ImageView
+
+
+        //Evento del boton (+) del AddActivity
+        btn_img.setOnClickListener { v ->
+            val intent = Intent(activity, AddInventory::class.java)
+            v.context.startActivity(intent)
+        }
+
+        //Elimina el contenedor de los objetos -> recyclerView
+        listInventory.clear()
+
+        //Llamo el metodo y le paso como parametro el reciclerView
+        setupRecyclerView(vista.findViewById(R.id.recyclerView))
+
+        //Creo la vista
+        return vista
+
+    }
+
+/*    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         bindingFragmentInventory = FragmentInventoryBinding.inflate(layoutInflater)
 
         //Colocar el contenedor de los objetos -> recyclerView
-
-      val view = bindingFragmentInventory.root
+        val view = bindingFragmentInventory.root
         setContentView(view)
 
-
-
 //        Evento del boton (+) del AddActivity
-
         bindingFragmentInventory.addImageView.setOnClickListener { v ->
             val intent = Intent(this, AddInventory::class.java)
             v.context.startActivity(intent)
@@ -57,7 +79,7 @@ class InventoryFragment : AppCompatActivity(R.layout.fragment_inventory) {
         listInventory.clear()
         setupRecyclerView(bindingFragmentInventory.recyclerView)
 
-    }
+    }*/
 
     private fun setupRecyclerView(recyclerView: RecyclerView) {
 
@@ -103,26 +125,28 @@ class InventoryFragment : AppCompatActivity(R.layout.fragment_inventory) {
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
             val mInventory = values[position]
-            holder.mIdTextView.text = mInventory.name
+            holder.mIdTextView.text = mInventory.id
             holder.mNameTextView.text = mInventory.name
-            holder.mAmountTextView.text = "C" + mInventory.name
+            holder.mAmountTextView.text = "Stock: " + mInventory.amount
             holder.mDateTextView.text = mInventory.date
-            holder.mPriceTextView.text = "Q" + mInventory.price
+            holder.mPriceTextView.text = "Q " + mInventory.price
             holder.mPosterImgeView.let {
                 Glide.with(holder.itemView.context)
                     .load(mInventory.url)
                     .into(it)
             }
 
+            //Al clickear encima del item ir a → detalles
             holder.itemView.setOnClickListener { v ->
-                val intent = Intent(v.context, DetailActivity::class.java).apply {
+                val intent = Intent(v.context, DetailInventory::class.java).apply {
                     putExtra("key", mInventory.key)
                 }
                 v.context.startActivity(intent)
             }
 
+            //Al mantener presionado encima del item ir a → edit
             holder.itemView.setOnLongClickListener{ v ->
-                val intent = Intent(v.context, EditActivity::class.java).apply {
+                val intent = Intent(v.context, EditInventory::class.java).apply {
                     putExtra("key", mInventory.key)
                 }
                 v.context.startActivity(intent)

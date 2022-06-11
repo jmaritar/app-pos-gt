@@ -1,12 +1,12 @@
-package com.polar502.posgt.inventory
+package com.polar502.posgt.providers
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.polar502.posgt.R
 
-class DetailInventoryActivity : AppCompatActivity() {
+class AddProviders : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail_inventory)
+        setContentView(R.layout.activity_add_providers)
     }
 }
