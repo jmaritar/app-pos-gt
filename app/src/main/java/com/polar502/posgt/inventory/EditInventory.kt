@@ -69,7 +69,7 @@ class EditInventory : AppCompatActivity() {
             }
         })
 
-        //Hacer cuando se presione el buttuon Guardar del Edit
+        //Hacer cuando se presione el buttuon Guardar el Edit
         bindingActivityEdit.saveButton.setOnClickListener {
 
             val name : String = bindingActivityEdit.nameEditText.text.toString()

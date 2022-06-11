@@ -6,6 +6,22 @@
         <entry key="..\:/Users/MARIO ARITA/Desktop/Kotlin/pos-gt-app/app/src/main/res/drawable/ic_fab.xml" value="0.1" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/Kotlin/pos-gt-app/app/src/main/res/drawable/ic_field.xml" value="0.143" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/Kotlin/pos-gt-app/app/src/main/res/drawable/ic_home_field.xml" value="0.1" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/Kotlin/pos-gt-app/app/src/main/res/drawable/side_nav_bar.xml" value="0.2075" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/Kotlin/pos-gt-app/app/src/main/res/layout/activity_add_customers.xml" value="0.2" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/Kotlin/pos-gt-app/app/src/main/res/layout/activity_add_inventory.xml" value="0.27507163323782235" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/Kotlin/pos-gt-app/app/src/main/res/layout/activity_add_providers.xml" value="0.16802536231884058" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/Kotlin/pos-gt-app/app/src/main/res/layout/activity_detail_customers.xml" value="0.22" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/Kotlin/pos-gt-app/app/src/main/res/layout/activity_edit_customers.xml" value="0.25" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/Kotlin/pos-gt-app/app/src/main/res/layout/activity_edit_providers.xml" value="0.2" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/Kotlin/pos-gt-app/app/src/main/res/layout/customers_content.xml" value="0.33" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/Kotlin/pos-gt-app/app/src/main/res/layout/fragment_customers.xml" value="0.2" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/Kotlin/pos-gt-app/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/Kotlin/pos-gt-app/app/src/main/res/layout/fragment_inventory.xml" value="0.33" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/Kotlin/pos-gt-app/app/src/main/res/layout/fragment_providers.xml" value="0.33" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/Kotlin/pos-gt-app/app/src/main/res/layout/inventory_content.xml" value="0.25" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/Kotlin/pos-gt-app/app/src/main/res/layout/nav_header.xml" value="0.18888888888888888" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/Kotlin/pos-gt-app/app/src/main/res/layout/providers_content.xml" value="0.33" />
+        <entry key="..\:/Users/MARIO ARITA/Desktop/Kotlin/pos-gt-app/app/src/main/res/layout/video_game_content.xml" value="0.67" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/PosGT/app/src/main/res/layout/content_main.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-app/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2075" />
         <entry key="..\:/Users/MARIO ARITA/Desktop/pos-gt-app/app/src/main/res/drawable/ic_add_orders.xml" value="0.2075" />

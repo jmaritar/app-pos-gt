@@ -82,13 +82,13 @@ class EditCustomers : AppCompatActivity() {
             val CustomersReference : StorageReference = folder.child("img$key")
 
             if(fileUri==null){
-                val mInventory = Inventory(id, name, nit, phone, email, address, imageUrl)
-                myRef.setValue(mInventory)
+                val mCustomers = Customers(id, name, nit, phone, email, address, imageUrl)
+                myRef.setValue(mCustomers)
             } else {
                 CustomersReference.putFile(fileUri!!).addOnSuccessListener {
                     CustomersReference.downloadUrl.addOnSuccessListener { uri ->
-                        val mInventory = Inventory(id, name, nit, phone, email, address, uri.toString())
-                        myRef.setValue(mInventory)
+                        val mCustomers = Customers(id, name, nit, phone, email, address, uri.toString())
+                        myRef.setValue(mCustomers)
                     }
                 }
             }

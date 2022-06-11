@@ -25,14 +25,14 @@
             android:layout_marginBottom="0dp"
             android:text=""
             android:textColor="@color/white"
-            android:textSize="0sp" />
+            android:textSize="0dp" />
 
         <TextView
             android:id="@+id/subtTitleTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Lista de Clientes"
-            android:textSize="24sp"
+            android:textSize="@dimen/fab_tittle"
             android:textColor="@color/white" />
     </LinearLayout>
 

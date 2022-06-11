@@ -22,17 +22,17 @@
             android:id="@+id/titleTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="0dp"
             android:text=""
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="0dp" />
 
         <TextView
             android:id="@+id/subtTitleTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Lista de Productos"
-            android:textSize="24sp"
+            android:textSize="@dimen/fab_tittle"
             android:textColor="@color/white" />
     </LinearLayout>
 
@@ -66,6 +66,8 @@
         android:layout_marginEnd="-80dp"
         android:layout_marginRight="-80dp"
         android:layout_marginBottom="-80dp"
+        android:background="@color/black_200"
+        app:cardBackgroundColor="@color/black_200"
         app:cardCornerRadius="80dp"
         app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -82,6 +84,7 @@
             android:layout_marginEnd="80dp"
             android:layout_marginRight="80dp"
             android:layout_marginBottom="80dp"
+            android:background="@color/black_200"
             app:layoutManager="LinearLayoutManager"
             tools:context=".MainActivity"
             tools:listitem="@layout/inventory_content">
