@@ -21,7 +21,6 @@ import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.polar502.posgt.*
-import com.polar502.posgt.databinding.FragmentInventoryBinding
 
 class InventoryFragment : Fragment() {
 
