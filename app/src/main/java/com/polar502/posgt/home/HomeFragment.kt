@@ -37,7 +37,7 @@ class HomeFragment : Fragment() {
         btn_go_inventory.setOnClickListener { v ->
             val intent = Intent(activity, MainActivity::class.java)
 
-            //Le envio parametros al MainActivity para que incie con el InventoryFragment
+            //Le envio parametros al MainActivity para que incie con el InventoryFragment.
             intent.putExtra("estado", "inventario")
             v.context.startActivity(intent)
         }
