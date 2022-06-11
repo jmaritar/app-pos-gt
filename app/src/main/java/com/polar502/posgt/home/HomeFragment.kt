@@ -27,7 +27,7 @@ class HomeFragment : Fragment() {
         val btn_go_inventory: ImageView = vista.findViewById(R.id.go_inventory) as ImageView
 
 
-        //Evento del boton (+) del AddActivity
+        //Evento del boton (+) del AddActivity.
         btn_add.setOnClickListener { v ->
             val intent = Intent(activity, AddInventory::class.java)
             v.context.startActivity(intent)
