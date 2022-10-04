@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "71078979010",
-    "project_id": "pos-gt-mobile",
-    "storage_bucket": "pos-gt-mobile.appspot.com"
+    "project_number": "518728901999",
+    "project_id": "test-2-47bc6",
+    "storage_bucket": "test-2-47bc6.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:71078979010:android:bd85f4d53ef359e6b1e25b",
+        "mobilesdk_app_id": "1:518728901999:android:9cc5220298dd41454cf49a",
         "android_client_info": {
           "package_name": "com.polar502.posgt"
         }
       },
       "oauth_client": [
         {
-          "client_id": "71078979010-5ic0p5o4qpolgl866pvl0rqkef8binro.apps.googleusercontent.com",
+          "client_id": "518728901999-3pjgc7m65cai9e7esqqv66gs59fv7gjl.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyADynwxlhqSjEqRpj_qXB8OwRsBIgNbCOQ"
+          "current_key": "AIzaSyCIUgCYCBG_EXqiBOkzwW_bB3S7tDHcOEI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "71078979010-5ic0p5o4qpolgl866pvl0rqkef8binro.apps.googleusercontent.com",
+              "client_id": "518728901999-3pjgc7m65cai9e7esqqv66gs59fv7gjl.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
